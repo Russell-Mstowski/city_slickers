@@ -1,13 +1,27 @@
 class PlacesController < ApplicationController
   before_action :set_place, only: %i[ show edit update destroy ]
 
+  # Default to page 1
+  DEFAULT_PAGE = 1
+
   # GET /places or /places.json
   def index
-    @places = Place.all
+    @places = if params[:search]
+      search = sanitize_and_normalize(params[:search])
+      page = params[:page] ? params[:page] : DEFAULT_PAGE
+
+      # TODO: Make more efficient. This will slow down when DB has a lot of records
+      Place.where("name LIKE ? OR description LIKE ?", "%#{search}%","%#{search}%").page(page).sort_by(&:rating).reverse
+    else
+      Place.all
+    end
+    
+    render json: @places
   end
 
   # GET /places/1 or /places/1.json
   def show
+    render json: @place
   end
 
   # GET /places/new
@@ -66,5 +80,10 @@ class PlacesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def place_params
       params.require(:place).permit(:latitude, :longitude, :name, :description)
+    end
+
+    # Remove leading/trailing whitespace / upcase characters / sanitize like query
+    def sanitize_and_normalize(string)
+      ActiveRecord::Base::sanitize_sql_like(string.strip.upcase)
     end
 end
