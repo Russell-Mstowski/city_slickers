@@ -5,6 +5,8 @@ class Place < ApplicationRecord
 
   validates :latitude, :longitude, numericality: true
 
+  attribute :rating
+
   # Average rating for a given Place rounded to 2 decimal places
   def rating
     self.ratings.average(:value).round(2)
