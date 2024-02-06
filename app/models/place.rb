@@ -1,10 +1,16 @@
 class Place < ApplicationRecord
   has_many :ratings
   
+  # Upcase fields before persisting
   before_save :upcase_fields
 
-  validates :latitude, :longitude, numericality: true
+  # Validate name & description are present
+  validates :name, :description, presence: true
 
+  # Validate lat & long are present & numeric in nature
+  validates :latitude, :longitude, presence: true, numericality: true
+
+  # Virtual attribute to present average rating
   attribute :average_rating
 
   # Limit pagination to 10 places
