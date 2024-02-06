@@ -81,7 +81,7 @@ const Home = () => {
     <React.Fragment>
       {/* TODO: Break out into component */}
       <div className="header">
-        <h1>City Slicker</h1>
+        <h1 className="logo" onClick={() => {window.location.reload()}}>City Slicker</h1>
         
         <p>Search a location by <b>name</b> or <b>description</b></p>
 
