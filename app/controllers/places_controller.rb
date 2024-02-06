@@ -10,7 +10,7 @@ class PlacesController < ApplicationController
       search = sanitize_and_normalize(params[:search])
       page = params[:page] ? params[:page] : DEFAULT_PAGE
 
-      # TODO: Make more efficient. This will slow down when DB has a lot of records
+      # TODO: Make more efficient. This will slow down when the DB has a lot of records
       Place.where("name LIKE ? OR description LIKE ?", "%#{search}%","%#{search}%").page(page).sort_by(&:rating).reverse
     else
       Place.all
