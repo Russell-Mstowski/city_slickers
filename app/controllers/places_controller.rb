@@ -27,7 +27,7 @@ class PlacesController < ApplicationController
         .page(page)
         .each do |place|
           begin
-            # set average rating
+            # Set average rating
             place.average_rating = place.rating
           rescue => e
             Rails.logger.error "Error setting average rating #{place.id}: #{e.message}"
