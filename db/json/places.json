@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Chicago",
+    "description": "As a multicultural city that thrives on the harmony and diversity of its neighborhoods, Chicago today embodies the values of America's heartland-integrity, hard work and community and reflects the ideals in the social fabric of its 77 distinct neighborhoods.",
+    "latitude": 41.8781136,
+    "longitude": -87.6297982
+  },
+  {
+    "name": "New York",
+    "description": "New York is composed of five boroughs – Brooklyn, the Bronx, Manhattan, Queens and Staten Island - is home to 8.4 million people who speak more than 200 languages, hail from every corner of the globe, and, together, are the heart and soul of the most dynamic city in the world.",
+    "latitude": 40.7127837,
+    "longitude": -74.0059413
+  },
+  {
+    "name": "Los Angeles",
+    "description": "The huge, sprawling, and tortuously shaped city of Los Angeles occupies a sizable portion of the southern part of the county. It too has a varied topography, climbing from sea level at the beach community of Venice to Mount Lukens, which rises above 5,100 feet (1,550 metres).",
+    "latitude": 34.0522342,
+    "longitude": -118.2436849
+  },
+  {
+    "name": "Houston",
+    "description": "Houston is the most diverse metropolitan area in Texas and has been described as the most racially and ethnically diverse major city in the U.S. It is home to many cultural institutions and exhibits, which attract more than seven million visitors a year to the Museum District.", 
+    "latitude": 29.7604267, 
+    "longitude": -95.3698028 
+  }, 
+  {
+    "name": "Philadelphia",
+    "description": "Philadelphia, the largest city in Pennsylvania, displays many characteristics of a small town. Its many trees, parks and other open spaces, and its quiet pace of life reflect in various ways the genteel Quaker heritage bestowed on the city by its founder, William Penn.", 
+    "latitude": 39.9525839, 
+    "longitude": -75.1652215 
+  }, 
+  {
+    "name": "Phoenix",
+    "description": "In ancient Greece, Phoenix mythology was a set of legends that surrounded the Phoenix, a mythical bird known for its ability to be reborn from its own ashes. It symbolizes immortality and renewal and is often depicted as a beautiful and majestic creature with brightly colored feathers and a long tail.", 
+    "latitude": 33.4483771, 
+    "longitude": -112.0740373 
+  }, 
+  {
+    "name": "San Antonio",
+    "description": "San Antonio is a modern, vibrant city, rich in heritage with colorful personality forged across three centuries. Its unique mixture of native Mexican, German and Spanish influence is noticeable in the city's distinctive architecture, music, arts, and cuisine.", 
+    "latitude": 29.4241219, 
+    "longitude": -98.49362819999999 
+  }, 
+  {
+    "name": "San Diego",
+    "description": "Named “America's Finest City,” the City of San Diego is best known for its ideal climate, beautiful beaches, and array of world-class family attractions. The City covers 342.5 square miles and stretches nearly 40 miles from north to south.", 
+    "latitude": 32.715738, 
+    "longitude": -117.1610838 
+  }, 
+  {
+    "name": "Dallas",
+    "description": "Dallas is the county seat of Dallas County. Some portions of the city also extend into Collin, Denton, Kaufman and Rockwall counties. Dallas is part of the largest metropolitan area in the southern United States and is the largest inland metropolitan area in the US without a navigatable link to the sea.", 
+    "latitude": 32.7766642, 
+    "longitude": -96.79698789999999 
+  }, 
+  {
+    "name": "San Jose",
+    "description": "California's oldest civilian settlement, founded in 1777. The site of California's first state capital. Northern California's largest city by population. The third largest city in California.", 
+    "latitude": 37.3382082, 
+    "longitude": -121.8863286 
+  }, 
+  {
+    "name": "Austin",
+    "description": "Located in Central Texas on the eastern edge of the American Southwest, Austin is the capital of the state of Texas, the Lone Star State. The city dates back to the 1830s, when the first Anglo-American settlers arrived in the area, then part of Mexico.", 
+    "latitude": 30.267153, 
+    "longitude": -97.7430608 
+  }, 
+  {
+    "name": "Indianapolis",
+    "description": "Indianapolis is the capital and largest city of the state of Indiana, which is located in the eastern half of the United States. Indy is near many large American cities. Chicago, for example, is just three hours away by car or bus.",
+    "latitude": 39.768403, 
+    "longitude": -86.158068 
+  }, 
+  {
+    "name": "Jacksonville",
+    "description": "Jacksonville is the most populous city proper in the U.S. state of Florida, located on the Atlantic coast of northeastern Florida. It is the seat of Duval County, with which the City of Jacksonville consolidated in 1968. It is the largest city by area in the contiguous United States as of 2020.", 
+    "latitude": 30.3321838, 
+    "longitude": -81.65565099999999 
+  }, 
+  {
+    "name": "San Francisco",
+    "description": "A popular tourist destination, San Francisco is known for its cool summers, fog, steep rolling hills, eclectic mix of architecture, and landmarks, including the Golden Gate Bridge, cable cars, the former Alcatraz Federal Penitentiary, Fisherman's Wharf, and its Chinatown district.", 
+    "latitude": 37.7749295, 
+    "longitude": -122.4194155 
+  }, 
+  {
+    "name": "Columbus",
+    "description": "Christopher Columbus was a navigator who explored the Americas under the flag of Spain. Some people think of him as the 'discoverer' of America, but this is not strictly true. His voyages across the Atlantic paved the way for European colonization and exploitation of the Americas.", 
+    "latitude": 39.9611755, 
+    "longitude": -82.99879419999999 
+  }, 
+  {
+    "name": "Charlotte",
+    "description": "Charlotte is one of the 25 largest cities in the U.S. and the largest city in North Carolina. Nicknamed the Queen City, Charlotte and its resident county are named in honor of Charlotte of Mecklenburg-Strelitz, the queen consort of British King George III during the time of the city's founding.", 
+    "latitude": 35.2270869, 
+    "longitude": -80.8431267 
+  }, 
+  {
+    "name": "Fort Worth",
+    "description": "Fort Worth — the most typically Texan of all Texas cities — began as a tiny outpost on a lonely frontier. Today, this metropolitan area of more than 900,000 people blends its cattle and oil heritage seamlessly with an ever-growing, diverse array of new businesses and industries.", 
+    "latitude": 32.7554883, 
+    "longitude": -97.3307658 
+  }, 
+  {
+    "name": "Detroit",
+    "description": "Detroit is a dynamic, diverse city with an intriguing history. It's a place of people and places, trends and events, world-changing inventions and groundbreaking music. Long known as the automobile capital of the world, Detroit is also famous for its distinctive Motown music sound from the 1960s.", 
+    "latitude": 42.331427, 
+    "longitude": -83.0457538 
+  }, 
+  {
+    "name": "El Paso",
+    "description": "El Paso is located at the western tip of Texas, where Texas, New Mexico and Old Mexico meet! We are the largest international metroplex in the world where cultures and traditions blend seamlessly; from the historic Old West to the colors of Mexico, from the heritage of Native Americans to the beauty of our desert sun!", 
+    "latitude": 31.7775757, 
+    "longitude": -106.4424559 
+  }, 
+  {
+    "name": "Memphis",
+    "description": "Memphis, city, seat (1819) of Shelby county, extreme southwestern Tennessee, U.S. It lies on the Chickasaw bluffs above the Mississippi River where the borders of Arkansas, Mississippi, and Tennessee meet. Memphis is Tennessee's most populous city and is at the centre of the state's second largest metropolitan area.", 
+    "latitude": 35.1495343, 
+    "longitude": -90.0489801 
+  }
+]
