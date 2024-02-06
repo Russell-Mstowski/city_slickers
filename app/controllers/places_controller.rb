@@ -6,14 +6,25 @@ class PlacesController < ApplicationController
 
   # GET /places or /places.json
   def index
+    page = params[:page] ? params[:page] : DEFAULT_PAGE
+
     @places = if params[:search]
       search = sanitize_and_normalize(params[:search])
-      page = params[:page] ? params[:page] : DEFAULT_PAGE
 
       # TODO: Make more efficient. This will slow down when the DB has a lot of records
-      Place.where("name LIKE ? OR description LIKE ?", "%#{search}%","%#{search}%").page(page).sort_by(&:rating).reverse
+      Place.where("name LIKE ? OR description LIKE ?", "%#{search}%","%#{search}%")
+      .page(page).sort_by(&:rating)
+      .reverse
+      .each do |place|
+        place.rating = place.rating
+      end
     else
-      Place.all
+      Place.page(page)
+      .sort_by(&:rating)
+      .reverse
+      .each do |place|
+        place.rating = place.rating
+      end
     end
     
     render json: @places
@@ -82,7 +93,7 @@ class PlacesController < ApplicationController
       params.require(:place).permit(:latitude, :longitude, :name, :description)
     end
 
-    # Remove leading/trailing whitespace / upcase characters / sanitize like query
+    # Remove leading/trailing whitespace / upcase characters / sanitize LIKE query
     def sanitize_and_normalize(string)
       ActiveRecord::Base::sanitize_sql_like(string.strip.upcase)
     end
