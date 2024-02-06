@@ -10,30 +10,39 @@ class PlacesController < ApplicationController
     page = params[:page] ? params[:page] : DEFAULT_PAGE
 
     @places = if params[:search]
+      begin
+        # Sanitize and normalize search query
+        query = sanitize_and_normalize(params[:search])
 
-      # Sanitize and normalize search query
-      query = sanitize_and_normalize(params[:search])
-
-      # grouping & ordering is more efficient than sort_by
-      Place.joins(:ratings)
-      .group('places.id')
-      .order('AVG(ratings.value) DESC')
-      .where("name LIKE ? OR description LIKE ?", "%#{query}%","%#{query}%")
-      .page(page)
-      .each do |place|
-        place.average_rating = place.rating
+        search_places(query, page)
+      rescue => e
+        Rails.logger.error "Error searching for places: #{e.message}"
       end
     else
-      Place.joins(:ratings)
-      .group('places.id')
-      .order('AVG(ratings.value) DESC')
-      .page(page)
-      .each do |place|
-        place.average_rating = place.rating
+      begin
+        # Grouping & ordering is more efficient than sort_by
+        Place.joins(:ratings)
+        .group('places.id')
+        .order('AVG(ratings.value) DESC')
+        .page(page)
+        .each do |place|
+          begin
+            # set average rating
+            place.average_rating = place.rating
+          rescue => e
+            Rails.logger.error "Error setting average rating #{place.id}: #{e.message}"
+          end
+        end
+      rescue => e
+        Rails.logger.error "Error retrieving places: #{e.message}"
       end
     end
     
-    render json: @places
+    if @places
+      render json: @places
+    else
+      render json: []
+    end
   end
 
   # GET /places/1 or /places/1.json
@@ -100,7 +109,28 @@ class PlacesController < ApplicationController
     end
 
     # Remove leading/trailing whitespace / upcase characters / sanitize LIKE query
-    def sanitize_and_normalize(string)
-      ActiveRecord::Base::sanitize_sql_like(string.strip.upcase)
+    def sanitize_and_normalize(query)
+      begin
+        ActiveRecord::Base::sanitize_sql_like(query.strip.upcase)
+      rescue => e
+        Rails.logger.error "Error sanitizing search query: #{e.message}"
+      end
+    end
+
+    def search_places(query, page)
+      # grouping & ordering is more efficient than sort_by
+      Place.joins(:ratings)
+      .group('places.id')
+      .order('AVG(ratings.value) DESC')
+      .where("name LIKE ? OR description LIKE ?", "%#{query}%","%#{query}%")
+      .page(page)
+      .each do |place|
+        begin
+          # set average rating
+          place.average_rating = place.rating
+        rescue => e
+          Rails.logger.error "Error setting average rating #{place.id}: #{e.message}"
+        end
+      end
     end
 end
