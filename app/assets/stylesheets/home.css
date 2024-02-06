@@ -5,7 +5,6 @@ body {
 table {
   border-collapse: collapse;
   border: 2px solid black;
-  /* font-family: sans-serif; */
   font-size: 0.8rem;
   letter-spacing: 1px;
   width: 100%;
@@ -34,12 +33,14 @@ tbody > tr:nth-of-type(even) {
   margin-bottom: 25px;
 }
 
-.searchInput { 
-  width: 250px;
-  height: 28px; 
+.search-input { 
+  width: 300px;
+  height: 30px;
+  border-radius: none !important;
+  border: 1px solid black;
 }
 
-.submitBtn {
+.submit-btn {
   width: 75px;
   height: 34px;
   background-color: black;
@@ -63,7 +64,6 @@ tbody > tr:nth-of-type(even) {
   background-color: black;
   color: white;
   border: none;
-  /* margin-left: 5px; */
 }
 
 .next {

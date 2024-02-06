@@ -85,8 +85,8 @@ const Home = () => {
         <p>Search a location by <b>name</b> or <b>description</b></p>
 
         <form onSubmit={(e) => {handleSearch(e)}}>
-          <input type="text" className="searchInput" name="query" placeholder="Search" value={query} onChange={(e) => {setQuery(e.target.value)}} />
-          <input type="submit" className="submitBtn" value="Submit" />
+          <input type="text" className="search-input" name="query" placeholder="Search" value={query} onChange={(e) => {setQuery(e.target.value)}} />
+          <input type="submit" className="submit-btn" value="Submit" />
         </form>
       </div>
 
