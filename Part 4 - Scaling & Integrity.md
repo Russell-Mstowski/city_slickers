@@ -22,6 +22,8 @@ Some things we can do as our user & data record count contiues to grow:
 
 5. Use Active Records `find_in_each` or `find_in_batch` methods to prevent loading all records in memory
 
+6. Use a gem like `rack-attack` to rate limit by IP
+
 ---
 
 ## Data Integrity
