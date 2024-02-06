@@ -17,6 +17,10 @@ td {
   padding: 8px 10px;
 }
 
+td:first-of-type {
+  text-transform: capitalize;
+}
+
 td:first-of-type, td:last-of-type {
   text-align: center;
 }
@@ -30,6 +34,11 @@ tbody > tr:nth-of-type(even) {
   margin-bottom: 25px;
 }
 
+.searchInput { 
+  width: 250px;
+  height: 28px; 
+}
+
 .submitBtn {
   width: 75px;
   height: 34px;
@@ -39,8 +48,32 @@ tbody > tr:nth-of-type(even) {
   margin-left: 5px;
 }
 
-.submitBtn:hover {
+.submitBtn:hover, .next:hover, .previous:hover {
   background-color: #00000090;
+}
+
+.page-btns {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.next, .previous {
+  width: 75px;
+  height: 34px;
+  background-color: black;
+  color: white;
+  border: none;
+  /* margin-left: 5px; */
+}
+
+.next {
+  position: absolute;
+  right: 208px;
+}
+
+.previous {
+  position: absolute;
+  left: 208px;
 }
 
 .table-content {
