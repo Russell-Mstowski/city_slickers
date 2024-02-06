@@ -7,6 +7,9 @@ class Place < ApplicationRecord
 
   attribute :rating
 
+  # Limit pagination to 10 places
+  self.per_page = 10
+
   # Average rating for a given Place rounded to 2 decimal places
   def rating
     self.ratings.average(:value).round(2)
