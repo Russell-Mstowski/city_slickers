@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "cityslicker",
   "private": true,
   "dependencies": {
     "@babel/core": "7",
@@ -9,6 +9,7 @@
     "@babel/runtime": "7",
     "@types/babel__core": "7",
     "@types/webpack": "5",
+    "axios": "^1.6.7",
     "babel-loader": "8",
     "compression-webpack-plugin": "9",
     "css-loader": "^6.10.0",
