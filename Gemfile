@@ -35,6 +35,9 @@ gem 'will_paginate', '~> 4.0'
 # Webpack substitute
 gem "shakapacker", "= 7.2"
 
+# React with Rails
+gem "react-rails", "= 3.2"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
