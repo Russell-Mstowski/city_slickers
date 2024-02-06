@@ -42,13 +42,13 @@ Instructions:
 
 4.) Make sure the endpoint is well tested for all branching logic and handlers.
 
-5.) Keep in mind errors you might want to rescue.
+5.) Keep in mind errors you might want to rescue. ✅
 
-6.) Further considerations of rate limiting and error handling.
+6.) Further considerations of rate limiting and error handling. ✅
 
 ------------------------
 
-### Part 3 - UI/UX
+### Part 3 - UI/UX ✅
 
 We want to connect the API to a web browser UI for people to enjoy and search `places`. For this exercise, it is recommended that you use either React.js or Ember.js. However, if you are more comfortable with Rails MVC, please feel free to take that route.
 
@@ -61,7 +61,7 @@ Instructions:
 
 ------------------------
 
-### Part 4 - Scaling & Data Integrity
+### Part 4 - Scaling & Data Integrity ✅
 
 This is a new web app and idea so we don't expect much traffic in the beginning, but we're hoping to scale it and make sure it can handle the throughput and user growth.
 
