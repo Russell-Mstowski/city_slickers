@@ -5,7 +5,7 @@ import "../../assets/stylesheets/home.css"
 
 const Home = () => {
   const [loading, setLoading] = useState(true)
-  const [places, setPlaces] = useState(null)
+  const [places, setPlaces] = useState()
   const [query, setQuery] = useState("")
   const [page, setPage] = useState(1)
 
@@ -91,9 +91,7 @@ const Home = () => {
         </form>
       </div>
 
-      { loading ? (
-        <div style={{ textAlign: "center", marginTop: 100 }}>loading...</div>
-      ) : (
+      { !loading ? (
         <div>
             {/* TODO: Break out into component */}
             <div className="table-content fade-in">
@@ -140,7 +138,7 @@ const Home = () => {
               ): ("")}
             </div>
         </div>
-      )}
+      ) : ("")}
     </React.Fragment>
   )
 }
