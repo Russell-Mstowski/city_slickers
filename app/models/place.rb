@@ -5,7 +5,7 @@ class Place < ApplicationRecord
 
   validates :latitude, :longitude, numericality: true
 
-  attribute :rating
+  attribute :average_rating
 
   # Limit pagination to 10 places
   self.per_page = 10
