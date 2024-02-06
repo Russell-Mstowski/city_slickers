@@ -32,22 +32,24 @@ const Home = () => {
     if (!places) getPlaces()
   })
 
+  if (loading) {
+    return <div style={{ textAlign: "center" }}>loading...</div>
+  }
+
   return (
     <React.Fragment>
-      <div style={{ textAlign: 'center', marginBottom: 50 }}>
+      <div className="header">
         <h1>City Slicker</h1>
         
         <p>Search a location by <b>name</b> or <b>description</b></p>
 
         <form onSubmit={(e) => {search(e)}}>
-          <input type="text" name="query" placeholder="Search" style={{ width: 250, height: 28 }} onChange={(e) => {setQuery(e.target.value)}} />
+          <input type="text" name="query" placeholder="Search" value={query} style={{ width: 250, height: 28 }} onChange={(e) => {setQuery(e.target.value)}} />
           <input type="submit" className="submitBtn" value="Submit" />
         </form>
       </div>
 
-      { loading ? (
-        <div style={{ textAlign: "center" }}>loading</div>
-      ) : (
+      { places.length > 0 ? (
         <div className="table-content fade-in">
           <table>
             <thead>
@@ -62,12 +64,14 @@ const Home = () => {
                 <tr key={place.id}>
                   <td width={150}>{place?.name}</td>
                   <td>{place?.description}</td>
-                  <td><b>{place?.rating}</b></td>
+                  <td><b>{place?.average_rating}</b></td>
                 </tr>
               )}
             </tbody>
           </table>
         </div>
+      ) : (
+        <div style={{ textAlign: "center", marginTop: 100 }}>No places found. Please Adjust your search.</div>
       )}
     </React.Fragment>
   )
