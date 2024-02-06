@@ -32,6 +32,9 @@ gem "rspec"
 # Pagination
 gem 'will_paginate', '~> 4.0'
 
+# Webpack substitute
+gem "shakapacker", "= 7.2"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -67,4 +70,3 @@ group :development do
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
 end
-
