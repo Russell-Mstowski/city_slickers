@@ -6,24 +6,30 @@ class PlacesController < ApplicationController
 
   # GET /places or /places.json
   def index
+    # Check for page param otherwise use default
     page = params[:page] ? params[:page] : DEFAULT_PAGE
 
     @places = if params[:search]
-      search = sanitize_and_normalize(params[:search])
 
-      # TODO: Make more efficient. This will slow down when the DB has a lot of records
-      Place.where("name LIKE ? OR description LIKE ?", "%#{search}%","%#{search}%")
-      .page(page).sort_by(&:rating)
-      .reverse
+      # Sanitize and normalize search query
+      query = sanitize_and_normalize(params[:search])
+
+      # grouping & ordering is more efficient than sort_by
+      Place.joins(:ratings)
+      .group('places.id')
+      .order('AVG(ratings.value) DESC')
+      .where("name LIKE ? OR description LIKE ?", "%#{query}%","%#{query}%")
+      .page(page)
       .each do |place|
-        place.rating = place.rating
+        place.average_rating = place.rating
       end
     else
-      Place.page(page)
-      .sort_by(&:rating)
-      .reverse
+      Place.joins(:ratings)
+      .group('places.id')
+      .order('AVG(ratings.value) DESC')
+      .page(page)
       .each do |place|
-        place.rating = place.rating
+        place.average_rating = place.rating
       end
     end
     
