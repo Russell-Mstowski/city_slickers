@@ -18,11 +18,21 @@ RSpec.describe "/places", type: :request do
   # Place. As you add validations to Place, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+      name: "Chicago",
+      description: "As a multicultural city that thrives on the harmony and diversity of its neighborhoods, Chicago today embodies the values of America's heartland-integrity, hard work and community and reflects the ideals in the social fabric of its 77 distinct neighborhoods.",
+      latitude: 41.8781136,
+      longitude: -87.6297982
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+      name: "",
+      description: "",
+      latitude: "latitude",
+      longitude: "longitude"
+    }
   }
 
   describe "GET /index" do
@@ -89,14 +99,19 @@ RSpec.describe "/places", type: :request do
   describe "PATCH /update" do
     context "with valid parameters" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+          name: "Chicago",
+          description: "As a multicultural city that thrives on the harmony and diversity of its neighborhoods, Chicago today embodies the values of America's heartland-integrity, hard work and community and reflects the ideals in the social fabric of its 77 distinct neighborhoods. The greatest city in the world!",
+          latitude: 41.8781136,
+          longitude: -87.6297982
+        }
       }
 
       it "updates the requested place" do
         place = Place.create! valid_attributes
         patch place_url(place), params: { place: new_attributes }
         place.reload
-        skip("Add assertions for updated state")
+        expect(place.description).to include("THE GREATEST CITY IN THE WORLD!")
       end
 
       it "redirects to the place" do
