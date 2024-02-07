@@ -4,10 +4,7 @@ RSpec.describe "ratings/new", type: :view do
   let!(:place) { FactoryBot.create(:place) }
 
   before(:each) do
-    assign(:rating, Rating.new(
-      place_id: place.id,
-      value: 1.5
-    ))
+    assign(:rating, FactoryBot.build(:rating, place_id: place.id))
   end
 
   it "renders new rating form" do

@@ -1,12 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe "ratings/edit", type: :view do
-  let(:rating) {
-    Rating.create!(
-      place_id: 1,
-      value: 1.5
-    )
-  }
+  let!(:place) { FactoryBot.create(:place) }
+  let(:rating) { FactoryBot.create(:rating, place_id: place.id) }
 
   before(:each) do
     assign(:rating, rating)
