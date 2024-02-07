@@ -1,14 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "places/edit", type: :view do
-  let(:place) {
-    Place.create!(
-      latitude: "9.99",
-      longitude: "9.99",
-      name: "MyString",
-      description: "MyText"
-    )
-  }
+  let!(:place) { FactoryBot.create(:place) }
 
   before(:each) do
     assign(:place, place)
