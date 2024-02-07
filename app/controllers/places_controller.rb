@@ -118,7 +118,7 @@ class PlacesController < ApplicationController
     end
 
     def search_places(query, page)
-      # grouping & ordering is more efficient than sort_by
+      # Grouping & ordering is more efficient than sort_by
       Place.joins(:ratings)
       .group('places.id')
       .order('AVG(ratings.value) DESC')
