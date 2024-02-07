@@ -5,11 +5,11 @@ RSpec.describe PlacesController, type: :controller do
   let!(:places) { [ FactoryBot.create(:place), FactoryBot.create(:place) ] }
 
   before do
-      places.each do |pl|
-        rating = FactoryBot.build(:rating, place_id: pl.id)
-        rating.save
-      end
+    places.each do |pl|
+      rating = FactoryBot.build(:rating, place_id: pl.id)
+      rating.save
     end
+  end
   
   describe '#index' do
     it 'assigns @places' do
