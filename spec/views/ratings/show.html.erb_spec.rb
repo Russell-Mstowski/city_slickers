@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe "ratings/show", type: :view do
+  let!(:place) { FactoryBot.create(:place) }
+
   before(:each) do
     assign(:rating, Rating.create!(
-      place_id: 2,
+      place_id: place.id,
       value: 3.5
     ))
   end
