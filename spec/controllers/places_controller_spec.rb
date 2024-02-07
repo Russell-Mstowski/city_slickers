@@ -6,8 +6,10 @@ RSpec.describe PlacesController, type: :controller do
 
   before do
     places.each do |pl|
-      rating = FactoryBot.build(:rating, place_id: pl.id)
-      rating.save
+      5.times do
+        rating = FactoryBot.build(:rating, place_id: pl.id)
+        rating.save
+      end
     end
   end
   
