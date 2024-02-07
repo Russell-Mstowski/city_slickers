@@ -14,15 +14,23 @@ require 'rails_helper'
 
 RSpec.describe "/ratings", type: :request do
   
+  let!(:place) { FactoryBot.create(:place) }
+  
   # This should return the minimal set of attributes required to create a valid
   # Rating. As you add validations to Rating, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    {
+      place_id: place.id,
+      value: rand(0.0...10.0).round(1)
+    }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    {
+      place_id: "test",
+      value: "invalid value"
+    }
   }
 
   describe "GET /index" do
@@ -88,15 +96,18 @@ RSpec.describe "/ratings", type: :request do
 
   describe "PATCH /update" do
     context "with valid parameters" do
+      let(:new_value) { rand(0.0...10.0).round(1) }
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        {
+          value: new_value
+        }
       }
 
       it "updates the requested rating" do
         rating = Rating.create! valid_attributes
         patch rating_url(rating), params: { rating: new_attributes }
         rating.reload
-        skip("Add assertions for updated state")
+        expect(rating.value).to eq(new_value)
       end
 
       it "redirects to the rating" do
