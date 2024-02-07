@@ -22,14 +22,6 @@ Rating.delete_all
 # Reset ID count
 ActiveRecord::Base.connection.reset_pk_sequence!('ratings')
 
-# {
-#   latitude: 0.0,
-#   longitude: 0.0,
-#   name: "",
-#   description: ""
-# }
-
-
 path = File.join(File.dirname(__FILE__), "./json/places.json")
 places = JSON.parse(File.read(path))
 
@@ -38,6 +30,6 @@ places.each do |place|
 
   # Generate 10 random ratings for each place
   10.times do
-    pl.ratings.create!({ value: rand(0.0...10.0).round(2)})
+    pl.ratings.create!({ value: rand(0.0...10.0).round(1)})
   end
 end
