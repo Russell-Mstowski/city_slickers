@@ -40,7 +40,10 @@ const Home = () => {
   const handleSearch = (e) => {
     e.preventDefault()
     
-    searchPlacesByPage(page)
+    searchPlacesByPage(1)
+
+    // Reset page to 1
+    setPage(1)
   }
 
   const nextPage = () => {
