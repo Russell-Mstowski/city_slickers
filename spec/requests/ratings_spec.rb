@@ -90,7 +90,6 @@ RSpec.describe "/ratings", type: :request do
         post ratings_url, params: { rating: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 
@@ -119,13 +118,11 @@ RSpec.describe "/ratings", type: :request do
     end
 
     context "with invalid parameters" do
-    
       it "renders a response with 422 status (i.e. to display the 'edit' template)" do
         rating = Rating.create! valid_attributes
         patch rating_url(rating), params: { rating: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 
