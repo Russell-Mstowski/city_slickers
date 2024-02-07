@@ -3,12 +3,17 @@ require 'rails_helper'
 RSpec.describe Place, type: :model do
   let!(:place) { FactoryBot.create(:place) }
   let!(:rating) { FactoryBot.build(:rating, place_id: place.id) }
+  let!(:invalid_place) { FactoryBot.build(:place, latitude: "bad latitude", longitude: "bad longitude") }
   
   before { rating.save! }
 
   describe "place model validations" do
     it "should save successfully" do
       expect(place.save).to eq(true)
+    end
+
+    it "shouldn't save successfully" do
+      expect(invalid_place.save).to eq(false)
     end
 
     it "validates name and description are upcased" do
