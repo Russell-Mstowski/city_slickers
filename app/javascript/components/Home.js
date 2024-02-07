@@ -72,7 +72,7 @@ const Home = () => {
 
   // Capitalize first letter of every sentence
   const formatDescription = (description) => {
-    return description.toLowerCase().replace(/(?<=(?:^|[.?!])\W*)[a-z]/g, i => i.toUpperCase())
+    return description?.toLowerCase().replace(/(?<=(?:^|[.?!])\W*)[a-z]/g, i => i.toUpperCase())
   }
 
   // Fetch places on load
@@ -110,7 +110,7 @@ const Home = () => {
                   <tbody>
                     { places.map(place => 
                       <tr key={place.id}>
-                        <td width={150}>{place?.name.toLowerCase()}</td>
+                        <td width={150}>{place?.name?.toLowerCase()}</td>
                         <td>{formatDescription(place?.description)}</td>
                         <td><b>{place?.average_rating}</b></td>
                       </tr>
