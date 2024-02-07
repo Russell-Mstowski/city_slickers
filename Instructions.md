@@ -23,7 +23,7 @@ Instructions: Build your modeling based on the information above. This should in
 
 -----------------------
 
-### Part 2 - API Exposure 
+### Part 2 - API Exposure ✅
 
 A `Place` needs to be discoverable by searching. We need to expose the data before we can build the UI.
 
@@ -34,17 +34,17 @@ We want to be able to fuzzy search a `Place` against it's `name` and `descriptio
 The endpoint should sort by the most popular - meaning the first object in the collection should have the highest aggregate `rating`.
 
 Instructions:
-1.) Build a collection (i.e., index) endpoint that supports fuzzy search by `name`. Make sure to consider the sanitization/normalization of the search query for case differences and trailing/leading whitespace. ✅
+1.) Build a collection (i.e., index) endpoint that supports fuzzy search by `name`. Make sure to consider the sanitization/normalization of the search query for case differences and trailing/leading whitespace.
 
-2.) Ensure the response implements pagination parameter support (feel free to roll your own or use a gem) as well as the sort requirements listed above. ✅
+2.) Ensure the response implements pagination parameter support (feel free to roll your own or use a gem) as well as the sort requirements listed above.
 
-3.) Ensure the endpoint returns JSON with all attributes. ✅
+3.) Ensure the endpoint returns JSON with all attributes.
 
 4.) Make sure the endpoint is well tested for all branching logic and handlers.
 
-5.) Keep in mind errors you might want to rescue. ✅
+5.) Keep in mind errors you might want to rescue.
 
-6.) Further considerations of rate limiting and error handling. ✅
+6.) Further considerations of rate limiting and error handling.
 
 ------------------------
 
@@ -77,7 +77,7 @@ To submit your proposal for this part, simply create a markdown file at the top 
 
 -----------------------
 
-### Part 5 - Testing
+### Part 5 - Testing ✅
 
 At Popular Pays by Lightricks, we place a high emphasis on testing. Not only does it give us security in the features we ship but also piece of mind. Write tests to include coverage of all controller actions, success and error request/response cycle, and unit testing for all model layer logic.
 
