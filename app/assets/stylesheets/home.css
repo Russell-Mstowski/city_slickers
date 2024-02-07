@@ -54,7 +54,7 @@ tbody > tr:nth-of-type(even) {
   margin-left: 5px;
 }
 
-.submitBtn:hover, .next:hover, .previous:hover {
+.submit-btn:hover, .next:hover, .previous:hover {
   background-color: #00000090;
 }
 
