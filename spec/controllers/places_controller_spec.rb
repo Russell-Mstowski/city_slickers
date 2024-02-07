@@ -31,8 +31,11 @@ RSpec.describe PlacesController, type: :controller do
     it 'assigns @places' do
       get :index, :params => { :search => "chi", :page => 1 }
 
+      data = JSON.parse(response.body)
+
       expect(response).to have_http_status(:ok)
       expect(assigns(:places)).to match_array(places)
+      expect(data.first["average_rating"]).to be > data.second["average_rating"]
     end
   end
 
