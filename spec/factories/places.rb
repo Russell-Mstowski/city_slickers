@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# TODO: Generate dynamically with Faker
 FactoryBot.define do
   factory :place, class: 'Place' do
     name { "Chicago" }
