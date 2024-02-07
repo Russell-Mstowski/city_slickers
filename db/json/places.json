@@ -19,7 +19,7 @@
   },
   {
     "name": "Houston",
-    "description": "Houston is the most diverse metropolitan area in Texas and has been described as the most racially and ethnically diverse major city in the U.S. It is home to many cultural institutions and exhibits, which attract more than seven million visitors a year to the Museum District.", 
+    "description": "Houston is the most diverse metropolitan area in Texas and has been described as the most racially and ethnically diverse major city in the United States It is home to many cultural institutions and exhibits, which attract more than seven million visitors a year to the Museum District.", 
     "latitude": 29.7604267, 
     "longitude": -95.3698028 
   }, 
@@ -73,7 +73,7 @@
   }, 
   {
     "name": "Jacksonville",
-    "description": "Jacksonville is the most populous city proper in the U.S. state of Florida, located on the Atlantic coast of northeastern Florida. It is the seat of Duval County, with which the City of Jacksonville consolidated in 1968. It is the largest city by area in the contiguous United States as of 2020.", 
+    "description": "Jacksonville is the most populous city proper in the United States state of Florida, located on the Atlantic coast of northeastern Florida. It is the seat of Duval County, with which the City of Jacksonville consolidated in 1968. It is the largest city by area in the contiguous United States as of 2020.", 
     "latitude": 30.3321838, 
     "longitude": -81.65565099999999 
   }, 
@@ -91,7 +91,7 @@
   }, 
   {
     "name": "Charlotte",
-    "description": "Charlotte is one of the 25 largest cities in the U.S. and the largest city in North Carolina. Nicknamed the Queen City, Charlotte and its resident county are named in honor of Charlotte of Mecklenburg-Strelitz, the queen consort of British King George III during the time of the city's founding.", 
+    "description": "Charlotte is one of the 25 largest cities in the United States and the largest city in North Carolina. Nicknamed the Queen City, Charlotte and its resident county are named in honor of Charlotte of Mecklenburg-Strelitz, the queen consort of British King George III during the time of the city's founding.", 
     "latitude": 35.2270869, 
     "longitude": -80.8431267 
   }, 
@@ -115,7 +115,7 @@
   }, 
   {
     "name": "Memphis",
-    "description": "Memphis, city, seat (1819) of Shelby county, extreme southwestern Tennessee, U.S. It lies on the Chickasaw bluffs above the Mississippi River where the borders of Arkansas, Mississippi, and Tennessee meet. Memphis is Tennessee's most populous city and is at the centre of the state's second largest metropolitan area.", 
+    "description": "Memphis, city, seat (1819) of Shelby county, extreme southwestern Tennessee, United States It lies on the Chickasaw bluffs above the Mississippi River where the borders of Arkansas, Mississippi, and Tennessee meet. Memphis is Tennessee's most populous city and is at the centre of the state's second largest metropolitan area.", 
     "latitude": 35.1495343, 
     "longitude": -90.0489801 
   }
